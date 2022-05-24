@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/styles.scss";
-import NavLogo from "../assets/images/JN-logo3-small.png";
+import NavLogo from "../assets/images/JN-logo2.png";
 import { FiPhoneCall } from "react-icons/fi";
 
 const Navbar = () => {

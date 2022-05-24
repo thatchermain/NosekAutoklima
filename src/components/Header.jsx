@@ -26,6 +26,10 @@ const Header = () => {
                 <h2 className="header__title header__title--service">
                   Stacja kontroli pojazdów
                 </h2>
+                <br />
+                <h2 className="header__title header__title--service">
+                  Mechanika
+                </h2>
               </div>
               <button className="header__button">Dowiedz się wiecej</button>
             </div>
