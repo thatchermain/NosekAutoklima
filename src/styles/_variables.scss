@@ -1,0 +1,40 @@
+//FONTS
+
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("../assets/fonts/Nunito-Regular.ttf");
+}
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../assets/fonts/Nunito-Bold.ttf");
+}
+@font-face {
+  font-family: "Nunito-Italic";
+  src: url("../assets/fonts/Nunito-Italic.ttf");
+}
+@font-face {
+  font-family: "Exo-Regular";
+  src: url("../assets/fonts/Exo-Regular.ttf");
+}
+@font-face {
+  font-family: "Exo-Bold";
+  src: url("../assets/fonts/Exo-Bold.ttf");
+}
+
+//COLORS
+
+$textDark: #212121;
+$textLight: #ededed;
+$mainBlue: #46b7e8;
+$mainRed: #e31e24;
+
+//LINKS
+
+.link {
+  text-decoration: none;
+  color: $textLight;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    color: $mainBlue;
+  }
+}
