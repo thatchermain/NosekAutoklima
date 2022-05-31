@@ -19,7 +19,9 @@ const NavbarMobile = () => {
       <div className="nav-mobile__wrapper">
         <div className="nav-mobile__container">
           <div className="nav-mobile__logo">
-            <img src={NavLogo} alt="Logo zakładu" />
+            <a href="#home">
+              <img src={NavLogo} alt="Logo zakładu" />
+            </a>
           </div>
           {!showMobile ? (
             <AiOutlineMenu
@@ -48,7 +50,7 @@ const NavbarMobile = () => {
               className="nav-mobile__item"
               onClick={() => setShowMobile(false)}
             >
-              <a className="link" href="#o_nas">
+              <a className="link" href="#about">
                 O nas
               </a>
             </li>
@@ -56,7 +58,7 @@ const NavbarMobile = () => {
               className="nav-mobile__item"
               onClick={() => setShowMobile(false)}
             >
-              <a className="link" href="#staze">
+              <a className="link" href="#services">
                 Usługi
               </a>
             </li>
@@ -64,7 +66,7 @@ const NavbarMobile = () => {
               className="nav-mobile__item"
               onClick={() => setShowMobile(false)}
             >
-              <a className="link" href="#praktyki">
+              <a className="link" href="#info">
                 Informacje
               </a>
             </li>
@@ -72,7 +74,7 @@ const NavbarMobile = () => {
               className="nav-mobile__item"
               onClick={() => setShowMobile(false)}
             >
-              <a className="link" href="#kontakt">
+              <a className="link" href="#contact">
                 Kontakt
               </a>
             </li>

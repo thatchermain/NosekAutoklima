@@ -1,7 +1,7 @@
 @import "./variables";
-
+///////////////////////////////////////////////////////////////////////////////////////////////
 //NAVIGATION
-
+///////////////////////////////////////////////////////////////////////////////////////////////
 .nav__wrapper {
   z-index: 10;
   position: fixed;
@@ -26,23 +26,24 @@
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: 1024px) {
-    width: 90%;
+    // width: 90%;
   }
 }
 .nav__logo {
   cursor: pointer;
+  max-width: 300px;
 }
 .nav__logo img {
   display: flex;
   flex: 1 1 100%;
-  width: 80%;
+  width: 50%;
   padding-top: 10px;
   @media screen and (max-width: 800px) {
     // width: 60%;
   }
 }
 .nav__links {
-  width: 45%;
+  min-width: 45%;
   @media screen and (max-width: 800px) {
     display: none;
   }
@@ -51,6 +52,7 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav__item {
@@ -102,7 +104,10 @@
     transform: rotate(0);
   }
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 //NAVIGATION MOBILE
+///////////////////////////////////////////////////////////////////////////////////////////////
 .nav-mobile {
   position: fixed;
   top: 0;
@@ -176,9 +181,12 @@
   padding: 1rem;
   cursor: pointer;
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////////
 //HEADER
-
+///////////////////////////////////////////////////////////////////////////////////////////////
+.headerimg {
+  width: 40%;
+}
 .header__wrapper {
   // background-image: url("../assets/images/pexels-albin-berlin-919073.jpg");
   background-image: url("../assets/images/hero2.jpg");
@@ -213,7 +221,7 @@
   flex-direction: column;
   justify-content: end;
   @media screen and (max-width: 1024px) {
-    width: 90%;
+    // width: 90%;
   }
 }
 .header__content {
@@ -252,8 +260,9 @@
     z-index: 1;
     font-size: clamp(1rem, 3vw, 1.5rem);
     letter-spacing: 2px;
-    padding: 2rem 0 0rem 1rem;
+    padding: 2rem 0 0rem 0rem;
     display: inline-block;
+    text-transform: capitalize;
     &:before {
       position: absolute;
       z-index: -1;
@@ -284,15 +293,17 @@
 }
 .header__button {
   position: relative;
+  // left: 0;
   margin: 4rem auto;
-  padding: 0.75rem 1.25rem;
+  margin: 4rem 0;
+  padding: 0.75rem 2.25rem;
   // font-family: "Nunito-Bold";
   font-family: "Exo-Bold";
   font-size: 1.1rem;
   letter-spacing: 0.5px;
   background-color: $mainBlue;
   color: $textLight;
-  color: $textDark;
+  // color: $textDark;
   border-radius: 5px;
   max-width: 300px;
   transition: 0.4s ease-in-out;
@@ -301,10 +312,10 @@
   &:before {
     position: absolute;
     content: "";
-    width: 20px;
+    width: 50px;
     height: 100%;
     background-color: rgba($textLight, 0.2);
-    left: -20px;
+    left: -50px;
     top: 0;
     transition: transform 0.4s ease-in-out;
     transform-origin: 100% 0;
@@ -321,4 +332,107 @@
     transform-origin: 0% 0;
     left: -20%;
   }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//ABOUT
+///////////////////////////////////////////////////////////////////////////////////////////////
+.about__wrapper {
+  width: 100vw;
+  // background-image: url("../assets/images/pexels-albin-berlin-919073.jpg");
+  background-position: 30% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  // height: 100vh;
+  // min-height: auto;
+
+  &--overlay {
+    // min-height: 100vh;
+    width: 100vw;
+    // height: auto;
+    // max-height: fit-content;
+    background: rgba(rgb(255, 255, 255), 0.75);
+    z-index: -1;
+  }
+}
+.about__container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0 6rem;
+}
+.about__content {
+  font-family: "Exo-Regular";
+  // height: 80vh;
+  // background: linear-gradient(145deg, #5466a1 30%, #b33226);
+  padding: 15px;
+  border-radius: 10px;
+  // box-shadow: 5px 5px 15px $textLight;
+  &--inner {
+    // background-color: $textLight;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+}
+.about__paragraph {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  padding: 2rem 0 3rem;
+}
+.about__cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.about__card {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  // background-color: #333;
+  padding: 2rem 0;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba($mainBlue, 0.99);
+  margin-bottom: 4rem;
+}
+.about__card-icon {
+  width: 6rem;
+  padding: 1rem;
+}
+.about__card-description {
+  text-align: center;
+  padding: 2rem;
+  font-family: "Exo-Bold";
+  font-size: 1rem;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//SERVICES
+///////////////////////////////////////////////////////////////////////////////////////////////
+.services__wrapper {
+  width: 100vw;
+  background-image: url("../assets/images/pexels-garvin-st-villier-3311574.jpg");
+  background-image: url("../assets/images/ac_bg.jpg");
+  background-position: 30% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  &--overlay {
+    min-height: 100vh;
+    width: 100vw;
+    height: auto;
+    max-height: fit-content;
+    // background: rgba(rgb(0, 0, 0), 0.85);
+    z-index: -1;
+  }
+}
+.services__container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
 }
